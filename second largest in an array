@@ -1,0 +1,17 @@
+2. // second largest in an array
+//Geeksforgeeks  sum
+int getSecondLargest(vector<int> &arr) {
+    int n = arr.size();
+    int largest = arr[0]; // fixed the largest as index [0]///
+    int SecondLargest  = INT_MIN;
+    for(int i = 1; i < n; i++) {  //// loop starts from 1 becoz we declared the arr[0] is higher
+        if(arr[i] >= largest) {
+            SecondLargest = largest;
+            largest = arr[i];
+        }
+        else if(arr[i] < largest && arr[i] > SecondLargest) {
+            SecondLargest = arr[i];
+        }
+    }
+    return SecondLargest;
+}
