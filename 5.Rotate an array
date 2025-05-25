@@ -1,4 +1,4 @@
-//189.leetcode question// Rotate an array.
+//189.leetcode question// Rotate an array->(left rotate an array by one place).
 
 
 class Solution {
