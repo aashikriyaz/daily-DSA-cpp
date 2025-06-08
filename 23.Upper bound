@@ -1,3 +1,6 @@
+//only one change in code between lowwer and upper bound
+
+
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -8,7 +11,6 @@ int lowerBound(vector<int> arr, int n, int x) {
 
     while (low <= high) {
         int mid = (low + high) / 2;
-        // maybe an answer
         if (arr[mid] > x) { 
             ans = mid;
             high = mid - 1;
