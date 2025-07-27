@@ -1,4 +1,4 @@
-1482.Leetcode
+1482.Leetcode (using binary search)
 
 class Solution {
 public:
