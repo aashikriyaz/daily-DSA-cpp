@@ -1,3 +1,5 @@
+1482.Leetcode
+
 class Solution {
 public:
     int min_day(vector<int>& bloomDay,int n,int k,int mid){
