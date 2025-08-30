@@ -1,1 +1,33 @@
 
+class Solution {
+    public String frequencySort(String s) {
+       
+      TreeMap<Character,Integer> map=new TreeMap<>();
+      for(int i=0;i<s.length();i++){
+        char c=s.charAt(i);
+        map.put(c,map.getOrDefault(c,0)+1);
+      }
+    
+      ArrayList<Integer> list=new ArrayList<>();
+      for(char i :map.keySet()){
+        list.add(map.get(i));
+      }
+      Collections.sort(list);
+      Collections.reverse(list);
+      String res="";
+  
+  for(int i :list){
+    for(char c :map.keySet()){
+        if(map.get(c)==i){
+            for(int j=0;j<i;j++){
+                 res+=c+"";
+            }
+         map.put(c,-1);
+         break;
+        }
+    }
+  }
+
+return res;
+    }
+}
