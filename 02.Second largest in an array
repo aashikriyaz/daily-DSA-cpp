@@ -1,5 +1,7 @@
 2. // second largest in an array
-//Geeksforgeeks  sum
+
+//Geeksforgeeks  sum//
+
 int getSecondLargest(vector<int> &arr) {
     int n = arr.size();
     int largest = arr[0]; // fixed the largest as index [0]///
