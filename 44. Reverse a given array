@@ -1,1 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class Solution {
+public:
+    int reverse(int x) {
+        long rev = 0;  // use long to detect overflow
+
+        while (x != 0) {
+            rev = rev * 10 + x % 10;
+
+            // Check for overflow (32-bit integer range)
+            if (rev > INT_MAX || rev < INT_MIN)
+                return 0;
+
+            x /= 10;
+        }
+
+        return (int)rev;
+    }
+};
+
+int main() {
+    Solution s;
+    cout << s.reverse(123) << endl;    // Output: 321
+    cout << s.reverse(-123) << endl;   // Output: -321
+    cout << s.reverse(120) << endl;    // Output: 21
+    cout << s.reverse(1534236469) << endl; // Output: 0 (overflow)
+    return 0;
+}
 
