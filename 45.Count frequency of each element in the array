@@ -1,6 +1,12 @@
 Count frequency of each element in the array
 //we can use int instead of void 
 //int is a return type ...void is like acting (printing)
+An unordered_map stores key–value pairs.
+Here:
+Key → element of the array
+Value → how many times that element appears (frequency)
+
+It automatically handles duplicates and keeps a count.
 
 #include <bits/stdc++.h>
 using namespace std;
